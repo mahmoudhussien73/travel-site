@@ -1,18 +1,18 @@
 let gulp = require('gulp'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvars = require('postcss-simple-vars'),
+nested = require('postcss-nested'),
+cssimport = require('postcss-import'),
+browserSync = require('browser-sync').create(),
 watch = require('gulp-watch');
 
 
-
-
-gulp.task('html', function(){
-	console.log('you make changes to html file');
-});
-
-
-
-
 gulp.task('style', function(){
-	console.log('you make changes to css file');
+	return gulp.src('./app/assets/src/sass/main.css')
+	.pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
+	.pipe(gulp.dest('./app/assets/css'))
+	.pipe(browserSync.stream());
 });
 
 
@@ -21,6 +21,17 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('./app/index.html', gulp.series('html'));
-	gulp.watch('./app/assets/css/*.css', gulp.series('style'));
+
+	browserSync.init({
+		server: {
+			baseDir: 'app'
+		}
+	});
+
+	gulp.watch('./app/index.html', function(){
+		browserSync.reload();
+	});
+
+	gulp.watch('./app/assets/src/**/*.css', gulp.series('style'));
+
 });
