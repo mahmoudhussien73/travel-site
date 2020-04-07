@@ -1,0 +1,24 @@
+.row{
+	flex-direction: column;
+
+	@mixin atmedium{
+		display: flex;
+		flex-direction: row;
+	}
+
+	& > div:not(:last-child) {
+		padding-right: 0;
+
+		@mixin atmedium{
+			padding-right: 3rem;
+		}
+	}
+
+	&__4{
+		flex: 1;
+	}
+
+	&__8{
+		flex: 2;
+	}
+}
