@@ -1,0 +1,7 @@
+.b-m-md{
+	margin-bottom: 1rem;
+
+	@mixin atmedium{
+		margin-bottom: 0;
+	}
+}

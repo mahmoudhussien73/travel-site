@@ -12,3 +12,4 @@ img{
 *{
 	box-sizing: inherit;
 }
+a{color: $orange;}
