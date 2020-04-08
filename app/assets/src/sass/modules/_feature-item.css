@@ -19,12 +19,11 @@
     		margin-right: 3rem;
     	}
 
-    	& img{
-    		width: 5rem;
+    	& span{
     		margin-bottom: 1rem;
+    		display: inline-block;
 
     		@mixin atsmall{
-    			width: 10rem;
     			margin-bottom: 0;
     		}
     	}
