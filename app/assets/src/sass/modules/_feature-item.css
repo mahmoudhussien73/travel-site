@@ -1,0 +1,42 @@
+.feature-item{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3rem;
+	text-align: center;
+	border-bottom: 1px solid #000;
+
+	@mixin atsmall{
+		flex-direction: row;
+		text-align: left;
+		border-bottom: none;
+	}
+
+	&__img{
+		text-align: center;
+    	margin-right: 1.5rem;
+
+    	@mixin atsmall{
+    		margin-right: 3rem;
+    	}
+
+    	& img{
+    		width: 5rem;
+    		margin-bottom: 1rem;
+
+    		@mixin atsmall{
+    			width: 10rem;
+    			margin-bottom: 0;
+    		}
+    	}
+	}
+
+	&__content{
+		
+		h3{
+			margin-top: 0;
+			font-size: 1.875rem;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+	}
+}
