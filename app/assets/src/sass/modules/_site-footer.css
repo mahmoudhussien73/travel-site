@@ -2,11 +2,6 @@
 	background-color: $mainBlue;
 	color: #fff;
 	text-align: center;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 936232828551047b741a389b03c5dfd253ef4d3c
 
 	& span{
 		display: block;
@@ -18,8 +13,4 @@
 			margin-right: 1rem;
 		}
 	}
-<<<<<<< HEAD
-=======
->>>>>>> footer
->>>>>>> 936232828551047b741a389b03c5dfd253ef4d3c
 }
