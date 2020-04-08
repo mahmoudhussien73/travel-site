@@ -7,6 +7,8 @@ cssImport = require('postcss-import'),
 browserSync = require('browser-sync').create(),
 mixins = require('postcss-mixins'),
 cssNano = require('cssnano'),
+sprite = require('gulp-svg-sprite'),
+rename = require('gulp-rename'),
 watch = require('gulp-watch');
 
 
@@ -19,6 +21,27 @@ gulp.task('style', function(){
 	})
 	.pipe(gulp.dest('./app/assets/css'))
 	.pipe(browserSync.stream());
+});
+
+let config = {
+	mode: {
+		css: {
+			sprite: 'svg/sprite.svg',
+			render: {
+				css: {
+					template: './app/assets/images/icons/sprite.css'
+				}
+			}
+		}
+	}
+};
+
+gulp.task('createsprite', function(){
+	return gulp.src('./app/assets/images/icons/*.svg')
+	.pipe(sprite(config))
+	.pipe(gulp.dest('./app/assets/images/sprite'))
+	.pipe(rename('_sprite.css'))
+	.pipe(gulp.dest('./app/assets/src/sass/modules'));
 });
 
 
