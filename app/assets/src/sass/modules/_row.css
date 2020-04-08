@@ -2,14 +2,6 @@
 	display: flex;
 	flex-direction: column;
 
-
-	@mixin atmedium{
-		flex-direction: row;
-
-		&--gutters > div{
-			display: flex;
-		}
-	}
 	
 	&--gutters{
 		margin-right: -2.5rem;
@@ -28,8 +20,16 @@
 	}
 
 	@mixin atmedium{
+		flex-direction: row;
+
+		&__6__md{
+			width: 50%;
+		}
+	}
+
+	@mixin atlarge{
 		&__2{
-		width: 16.60%;
+			width: 16.60%;
 		}
 
 		&__3{
@@ -57,19 +57,7 @@
 		}
 	}
 
-	@mixin atmedium{
-		&__6__md{
-			width: 50%;
-		}
-	}
-
-	@mixin atlarge{
-		&__4{
-			width: 33.33%;
-		}
-	}
-
-
+	
 
 	&--t-padding{
 		padding-top: 3rem;
