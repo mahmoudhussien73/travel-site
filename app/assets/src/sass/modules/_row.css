@@ -1,15 +1,8 @@
 .row{
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
 
-
-	@mixin atmedium{
-		flex-direction: row;
-
-		&--gutters > div{
-			display: flex;
-		}
-	}
 	
 	&--gutters{
 		margin-right: -2.5rem;
@@ -27,7 +20,15 @@
 		padding-right: 100px;
 	}
 
+
 	@mixin atmedium{
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		&--gutters > div{
+			display: flex;
+		}
+
 		&__2{
 		width: 16.60%;
 		}
@@ -55,9 +56,6 @@
 		&__12{
 			width: 100%;
 		}
-	}
-
-	@mixin atmedium{
 		&__6__md{
 			width: 50%;
 		}
@@ -68,8 +66,6 @@
 			width: 33.33%;
 		}
 	}
-
-
 
 	&--t-padding{
 		padding-top: 3rem;

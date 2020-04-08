@@ -7,11 +7,16 @@
 	}
 
 	&__text-content{
+		padding-top: 90px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		width: 100%;
 		text-align: center;
+
+		@mixin atmedium{
+			padding-top: 60px;
+		}
 	}
 
 	&__title{
