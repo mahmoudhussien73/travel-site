@@ -21,4 +21,14 @@
 			margin-bottom: 3.85rem;
 		}
 	}
+	
+	&--no-p-md{
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atmedium{
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+	}
 }
