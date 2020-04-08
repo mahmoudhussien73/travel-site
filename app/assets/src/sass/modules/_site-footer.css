@@ -1,0 +1,19 @@
+.site-footer{
+	background-color: $mainBlue;
+	color: #fff;
+	text-align: center;
+<<<<<<< HEAD
+=======
+
+	& span{
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+
+		@mixin atmedium{
+			display: inline-block;
+			margin-right: 1rem;
+		}
+	}
+>>>>>>> footer
+}

@@ -8,7 +8,10 @@
 @import 'modules/_row';
 @import 'modules/_headline';
 @import 'modules/_page-section';
-@import'modules/_generic-content-container';
-@import'modules/_section-title';
-@import'modules/_feature-item';
-@import'modules/_helper';
+@import 'modules/_generic-content-container';
+@import 'modules/_section-title';
+@import 'modules/_feature-item';
+@import 'modules/_testimonial';
+@import 'modules/_site-footer';
+@import 'modules/_helper';
+@import 'modules/_sprite';
