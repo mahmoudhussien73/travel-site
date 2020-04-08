@@ -492,10 +492,6 @@ a{color: #d59541;}
 	flex-direction: column;
 }
 
-.row > div{
-		width: 100%;
-	}
-
 @media (min-width: 800px){
 
 .row{
